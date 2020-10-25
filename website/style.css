@@ -1,0 +1,95 @@
+body{
+    background-image: url("./img/background.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 20px;
+    min-height: 95vh;
+	margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.card-container {
+	background-color: #2b2924b3;
+	border-radius: 3vh;
+	box-shadow: 0px 20px 30px -7px rgb(0 0 0 / 89%);
+	color: #f9d6ad;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+
+#entryHolder{
+    display: grid;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: auto auto;
+    min-height: 12vh;
+}
+
+.grid-label{
+    display: flex;
+    padding-left: 35px;
+}
+
+.grid-content{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    height: 60px;
+    width: 300px;
+    background:#2d2d2dc9;
+    border-radius: 1vh;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    color: antiquewhite;
+}
+
+button{
+    color: #f9d6ad;
+    background: #353535;
+    font-size: 26px;
+    border-radius: 1vh;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow:2px 4px 5px #f9d6ad4d;
+    cursor: pointer;
+}
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    width: 300px;
+    height: 180px;
+    border-radius: 1vh;
+    background:#2d2d2dc9;
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
