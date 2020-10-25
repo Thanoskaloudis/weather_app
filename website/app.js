@@ -1,7 +1,7 @@
 /* Global Variables */
 
-let baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
-let key = '9095b90b1afac8044563d3e11fa03da6';
+const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
+const key = '9095b90b1afac8044563d3e11fa03da6';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -25,7 +25,7 @@ function performAction(e){
 
 // Async GET
 const getTemperature = async (baseURL, code, key)=>{
-    const response = await fetch(baseURL + code + ',us' + '&APPID=' + key)
+    const response = await fetch(baseURL + code + ',us' + '&APPID=' + key + '&units=imperial')
     console.log(response);
     try {
         const data = await response.json();
@@ -62,7 +62,7 @@ const updateUI = async () => {
     try {
         const allData = await request.json();
         document.getElementById('date').innerHTML = allData.date;
-        document.getElementById('temp').innerHTML = Math.round(((allData.temperature-273.15) * 1.8) + 32) + "℉";
+        document.getElementById('temp').innerHTML = allData.temperature + "℉";
         document.getElementById('content').innerHTML = allData.user_response;
     }
     catch (error) {
